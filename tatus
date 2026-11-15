@@ -1,0 +1,27 @@
+[1mdiff --git a/lectures/05/answer.md b/lectures/05/answer.md[m
+[1mindex 5c84139..cdf7dc8 100644[m
+[1m--- a/lectures/05/answer.md[m
+[1m+++ b/lectures/05/answer.md[m
+[36m@@ -2,14 +2,14 @@[m
+ [m
+ ## 演習[m
+ [m
+[31m-- `--list-tools` で見えたツール名と、第3回（`--mcp` なし）との違い：[m
+[31m-- `--mcp --trace` で見えたツール呼び出し（ツール名と引数）と、`requests` の回数：[m
+[31m-- MCP サーバーに公開したツールと、その説明文：[m
+[31m-- fetch サーバーを足したときのツール呼び出し（ツール名と引数）：[m
+[32m+[m[32m- `--list-tools` で見えたツール名と、第3回（`--mcp` なし）との違い： MCP経由では glossary_search_glossary のようにサーバー名が付く。[m
+[32m+[m[32m- `--mcp --trace` で見えたツール呼び出し（ツール名と引数）と、`requests` の回数： glossary_search_glossary({'query': '3レベル'})、requests=2[m
+[32m+[m[32m- MCP サーバーに公開したツールと、その説明文： search_glossary（講座の用語検索）[m
+[32m+[m[32m- fetch サーバーを足したときのツール呼び出し（ツール名と引数）： fetch_fetch({'url': 'https://modelcontextprotocol.io/'}) でページを取得できた。[m
+ [m
+ ## 宿題[m
+ [m
+[31m-- 取り組んだレベル：基礎 / 実装 / 発展[m
+[31m-- やったこと：[m
+[31m-- 結果：[m
+[31m-- 気づき・疑問：[m
+[32m+[m[32m- 取り組んだレベル：基礎[m
+[32m+[m[32m- やったこと： stdioとHTTP方式の比較、docstringの変更。[m
+[32m+[m[32m- 結果： 両方式で正常動作した。HTTP方式ではポート8000を使用。docstring変更後もツール呼び出しは1回だった。[m
+[32m+[m[32m- 気づき・疑問： 通信方式とツールの機能は独立しており、docstringの変更にはサーバーの再起動が必要だと分かった。[m
